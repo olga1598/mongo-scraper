@@ -229,7 +229,7 @@ app.delete("/deletenote", function (req, res) {
     var result = {};
     result._id = req.body._id;
     console.log(result._id);
-    Note.findOneAndRemove({
+    db.Note.findOneAndDelete({
         '_id': req.body._id
     }, function (err, doc) {
         // Log any errors
@@ -239,6 +239,8 @@ app.delete("/deletenote", function (req, res) {
         }
         // Or log the doc
         else {
+            console.log("deleted note");
+            console.log(doc);
             res.json(doc);
         }
     });

@@ -243,20 +243,21 @@ $(document).on("click", ".create-note", function (data) {
             ili.addClass("collection-item");
 
             var idiv = $("<div>");
-            idiv.text(data.notes[i].body);
+            // idiv.text(data.notes[i].body);
 
             // var button = $("<button>");
             // button.attr("button-id", data.notes[i]._id);
             // button.addClass("note-delete-button");
             // button.attr("type", "delete");
 
-            idiv.append(data.notes[i].body,);
+            // idiv.append(data.notes[i].body);
 
             var adelete = $("<a>");
             adelete.addClass("secondary-content");
             adelete.attr("note-id", data.notes[i]._id);
             adelete.attr("href", "#");
-            adelete.attr("onclick", 'deletenote("' + data.notes[i]._id + '")');
+            adelete.addClass("deletenote");
+            // adelete.attr("onclick", 'deletenote("' + data.notes[i]._id + '")');
             var xdelete = $("<i>");
             xdelete.addClass("material-icons");
             xdelete.attr("note-id", data.notes[i]._id);
@@ -292,7 +293,7 @@ $(document).on("click", "#savenote", function () {
     })
     //when it's done
     .then(function(data) {
-        //$('.modal').modal('hide');
+        $('.modal').modal('hide');
         // Log the response
         console.log(data);
 
@@ -300,8 +301,8 @@ $(document).on("click", "#savenote", function () {
 });
 
 // delete note button
-$(document).on("click", "#deletenote", function () {
-    var noteId = $(this).attr("button-id");
+$(document).on("click", ".deletenote", function () {
+    var noteId = $(this).attr("note-id");
     console.log(noteId);
     var data = {
         "_id": noteId
@@ -311,7 +312,10 @@ $(document).on("click", "#deletenote", function () {
         url: "/deletenote",
         data: data,
         success: function (data, textStatus) {
+            console.log("note deleted");
+            console.log(data);
             $("#display-note" + noteId).remove();
+            $('.modal').modal('hide');
         }
     })
 });
