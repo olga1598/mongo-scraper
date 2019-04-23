@@ -1,0 +1,95 @@
+body {
+font-family: 'Indie Flower', cursive;
+}
+
+.bg-primary {
+    background-color: lightcoral !important;
+}
+
+#button1:hover, #button2:hover {
+    background-color: darkred;
+}
+
+.btn {
+    background-color: darkred;
+    color: white !important;
+}
+
+.jumbotron .background-image {
+    background-image: url(../images/keto2.jpg);
+    background-size: cover;
+    height:100%;
+
+}
+
+.jumbotron .caption h1 {
+    font-size: 100px;
+    color: red;
+    text-shadow: 4px 4px #050505;
+}
+
+.jumbotron .caption {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    color: red;
+    text-shadow: 4px 4px #050505;
+
+}
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding: 0;
+}
+
+h3 {
+    color: white;
+}
+
+.card {
+    background-color: bisque;
+    margin: 10px;
+}
+
+.card-action {
+    margin: 10px;
+}
+
+.card-content {
+    margin: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-header, .footer{
+    background-color: lightcoral;
+}
+
+.card-body {
+    background-color: rgb(240, 158, 158);
+    color: white !important;
+}
+
+.modal {
+    width: 75%;
+    margin-top: 10%;
+    margin-left: 10%;
+   
+}
+
+#display {
+    font-size: 30px;
+}
+
+.collection-header {
+    font-size: 30px;
+}
+.collection-item {
+    font-size: 20px;
+}

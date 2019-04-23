@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mongo Scraper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/materia/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">   <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">Mongo Scraper</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/" id="button1">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/saved" id="viewSavedArticles">Saved Articles
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-danger scrape-new">SCRAPE NEW RECIPES!</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-danger clear" id="button3">CLEAR ARTICLES!</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <div class="overlay">
+  </div>
+  <div class="background-image">
+  </div>
+  <div class="caption">
+    <h1>Mongo Scraper</h1>
+    <p>The New York Times FOOD edition</p>
+  </div>
+</div>
+<div id="saved" class="card" style="display: block">
+    <p class="card-header">Your saved articles:</p>
+    <div id="savedArticlesDiv" class="card-body">
+        <ol id="savedArticles"></ol>
+    </div>
+</div>
+<!-- <div data-_id=5cb6784ec6741900154bb155 class="card">
+      <div class="card-header">
+        <h3>
+          <a class="article-link" target="_blank" rel="noopener noreferrer" href="https://www.nytimes.com/2019/04/16/dining/niche-review-mazemen.html">Ramen Without Broth? A Chef Doubles Down on a Sidelined Dish</a>
+          <a class="btn btn-danger delete">Delete From Saved</a>
+          <a class="btn btn-info notes">Article Notes</a>
+        </h3>
+      </div>
+      <div class="card-body">At Niche, a new restaurant in New York City, Shigetoshi Nakamura specializes in mazemen, a ramen style that has been slow to catch on locally.</div>
+    </div>
+    <div data-_id=5cb6784ec6741900154bb153 class="card">
+      <div class="card-header">
+        <h3>
+          <a class="article-link" target="_blank" rel="noopener noreferrer" href="https://www.nytimes.com/2019/04/16/magazine/consumer-financial-protection-bureau-trump.html">How a Trump Aide Crippled America’s Consumer Watchdog From Within</a>
+          <a class="btn btn-danger delete">Delete From Saved</a>
+          <a class="btn btn-info notes">Article Notes</a>
+        </h3>
+      </div>
+      <div class="card-body">Elizabeth Warren helped create the C.F.P.B. to protect Americans from predatory lenders. Mick Mulvaney took it apart on the way to the White House.</div>
+    </div>
+</div> -->
+</br>
+</br>
+
+<footer class="footer">
+  <div class="container">
+    <p>The New York Times FOOD Mongo Scraper</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+</body>
+
+</html>
