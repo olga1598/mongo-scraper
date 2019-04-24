@@ -128,6 +128,15 @@ module.exports = function (app) {
         });
     });
 
+    //Route for display all articles from DB
+    app.get("/display-results", function(req, res) {
+        db.Article.find({}).then(function(data) {
+            console.log(data);
+            res.json(data);
+        });
+    });
+
+    //Delete one asked article from DB
     app.delete("/delete", function (req, res) {
         var result = {};
         result._id = req.body._id;
@@ -147,6 +156,7 @@ module.exports = function (app) {
         });
     });
 
+    //Get all the notes for one specific article
     app.get("/notes/:id", function (req, res) {
         console.log("Asking for all notes fron ID: " + req.params.id);
         // if(req.params.id) {
@@ -184,7 +194,7 @@ module.exports = function (app) {
     //     }
     // });
     
-    // Route for saving/updating an Article's associated Note
+    // Route for saving an Article's associated Note
 app.post("/notes/:id", function(req, res) {
     console.log(req.body);
     console.log("ID: ===========" + req.params.id);
