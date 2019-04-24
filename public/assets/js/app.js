@@ -221,10 +221,12 @@ $(document).on("click", ".create-note", function (data) {
         //$("#display-note").text("Notes for the Article: " + data.note.title);
         // console.log(data.note.title);
         // console.log(data.note.body);
-        console.log(data.notes);            
+        console.log(data.title);            
 
         //var notetext = "Notes: " + data[0].body;
         $("#display-note").empty();
+        var title = $("#display");
+        title.text(data.title);
         var noteList = $("<ul>");
         noteList.addClass("collection with-header");
         var hli = $("<li>");
@@ -281,7 +283,6 @@ $(document).on("click", "#savenote", function () {
     var notetitle = $("#notetitle").val();
    console.log(text);
     // console.log(thisId);, data.note
-    console.log(notetitle);
     // Run a POST request to change the note, using what's entered in the inputs
     $.ajax({
         type: "POST",
