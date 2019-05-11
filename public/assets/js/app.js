@@ -3,7 +3,7 @@ console.log("Javascript file connected");
 // $(function () {
 function displayScrape() {
     //$(".scrape-new").on("click", function(event) {
-
+console.log("Will scrape articles");
         $.ajax({
             type: "GET",
             url: "/scrape"
@@ -143,6 +143,7 @@ $(document).on("click", '.save-button', function(){
         type: "PUT",
         url: "/save-article/" + articleId,
     }).then(function(response) {
+        alert("Your article have been saved");
         console.log(JSON.stringify(response));
         
     });

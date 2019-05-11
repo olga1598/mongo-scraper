@@ -39,7 +39,10 @@ module.exports = function (app) {
                 results.title = $($(element).find("h2.headline")).text().trim();
                 results.link = $(element).attr("href");
                 results.summary = $($(element).find("p.summary")).text().trim();
-        // console.log(results.title);
+                console.log("=======");
+                console.log(results.link);
+                console.log("=======");
+
         // console.log(results.link);
 
                 // // Save these results in an object that we'll push into the results array we defined earlier
@@ -55,6 +58,7 @@ module.exports = function (app) {
                 console.log(dbArticle);
                 })
                 .catch(function(err) {
+                    console.log("+++++ERRROR++++")
                 // If an error occurred, log it
                 console.log(err);
                 return res.json(err);
@@ -131,7 +135,7 @@ module.exports = function (app) {
     //Route for display all articles from DB
     app.get("/display-results", function(req, res) {
         db.Article.find({}).then(function(data) {
-            console.log(data);
+            //console.log(data);
             res.json(data);
         });
     });
