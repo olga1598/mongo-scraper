@@ -21,7 +21,10 @@ app.use(express.static(__dirname + "/public"));
 // mongoose.connect("mongodb://localhost/scraper", { useNewUrlParser: true });
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds155616.mlab.com:55616/heroku_zz14tttd", { useNewUrlParser: true });
+mongoose.connect("mongodb://testuser10:pwd123pwd@ds155616.mlab.com:55616/heroku_zz14tttd", { useNewUrlParser: true });
+
+// // Connect to the Mongo DB - old one
+// mongoose.connect("mongodb://heroku_xf4b31p9:sv_dhvRgfmBfVZTIT7geYpXUd6ipf_BN@ds111059.mlab.com:11059/heroku_xf4b31p9", { useNewUrlParser: true });
 // Routes
 require("./routes/api-routes")(app);
 require("./routes/html-routes")(app);
