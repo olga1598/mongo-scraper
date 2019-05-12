@@ -17,11 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
-// // Connect to the Mongo DB
-// mongoose.connect("mongodb://localhost/scraper", { useNewUrlParser: true });
-
 // Connect to the Mongo DB
-mongoose.connect("mongodb://heroku_xf4b31p9:sv_dhvRgfmBfVZTIT7geYpXUd6ipf_BN@ds111059.mlab.com:11059/heroku_xf4b31p9", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/scraper", { useNewUrlParser: true });
+
+// // Connect to the Mongo DB
+// mongoose.connect("mongodb://heroku_xf4b31p9:sv_dhvRgfmBfVZTIT7geYpXUd6ipf_BN@ds111059.mlab.com:11059/heroku_xf4b31p9", { useNewUrlParser: true });
 // Routes
 require("./routes/api-routes")(app);
 require("./routes/html-routes")(app);
